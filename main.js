@@ -104,7 +104,7 @@ if(promedioImeca > 170){
 console.log(`La multa a pagar: ${multaPagar}`)
 
 //Ejercicio 7
-const personas = 1
+const personas = 70
 const años = 3
 for(let i = 0; i < personas ;i++){
     const valor = parseInt(prompt(`Introduce el valor del terreno o automovil de la persona ${i} `))
