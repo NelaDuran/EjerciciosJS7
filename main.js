@@ -109,19 +109,17 @@ const personas = 1
 const años = 3
 for(let i = 0; i < personas ;i++){
     const valor = parseInt(prompt(`Introduce el valor del terreno o automovil de la persona ${i} `))
-    const porcentajeDevaliacion = parseInt(prompt(`Ingrese el porcentaje de devaluación del automovil`))
-    const porcentajeEvaluacion = parseInt(prompt(`Ingrese el porcentaje de evaluación del terreno`))
-    let devalucaion = porcentajeDevaliacion / 100
-    let evaluacion = porcentajeEvaluacion / 100
     let devaluacionAuto = 0 
     let evaluacionTerreno = 0
     for(let j = 0 ; j < años; j ++){
+        const porcentajeDevaliacion = parseInt(prompt(`Ingrese el porcentaje de devaluación del automovil del año ${j}`))
+        const porcentajeEvaluacion = parseInt(prompt(`Ingrese el porcentaje de evaluación del terreno del año ${j}`))
+        let devalucaion = porcentajeDevaliacion / 100
+        let evaluacion = porcentajeEvaluacion / 100
         devaluacionAuto = devaluacionAuto + (valor -devalucaion)
         evaluacionTerreno = evaluacionTerreno + (valor + evaluacion)
     }
     let incrementoTerreno = evaluacionTerreno - valor
-    console.log("incremento "+incrementoTerreno)
-    console.log("devaluacion auto "+devaluacionAuto)
     if (devaluacionAuto <= (incrementoTerreno / 2)) {
         console.log("Comprar el automóvil")
     } else {
